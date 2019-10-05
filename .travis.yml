@@ -15,7 +15,7 @@ before_install:
  - gcloud config set compute/zone us-central1-a
  - gcloud container clusters get-credentials multi-k8s
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
- - docker build -t imashaly/tst -f ./client/Dockerfile.dev ./client/Dockerfile
+ - docker build -t imashaly/tst -f ./client/Dockerfile.dev ./client/
 
 deploy:
  provider: script

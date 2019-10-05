@@ -16,9 +16,6 @@ before_install:
  - gcloud container clusters get-credentials multi-k8s
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
  - docker build -t imashaly/tst -f ./client/Dockerfile.dev ./client/Dockerfile
- 
-script:
- - docker run -e CI=true imashaly/tst npm test -- --coverage
 
 deploy:
  provider: script

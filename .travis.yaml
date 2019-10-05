@@ -3,8 +3,6 @@ services:
  - docker
 env:
  global:
-  # is going to determine current commit SHA and assign it to Env variable.
-  # we can freely access this env variable inside deployed SHA file 
   - SHA=$(git rev-parse HEAD)
   - CLOUDSDK_CORE_DISABLE_PROMPTS=1
 before_install:
